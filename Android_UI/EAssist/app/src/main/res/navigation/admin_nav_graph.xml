@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_nav_graph"
+    app:startDestination="@id/viewUsersFragment">
+
+    <fragment
+        android:id="@+id/viewUsersFragment"
+        android:name="com.unipi.pfatouros.eassist.fragment.admin.ViewUsersFragment"
+        android:label="@string/view_users"
+        tools:layout="@layout/fragment_view_users" />
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.unipi.pfatouros.eassist.fragment.admin.AddUserFragment"
+        android:label="@string/add_user"
+        tools:layout="@layout/fragment_add_user" />
+</navigation>

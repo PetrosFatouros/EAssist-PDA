@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- cleartext HTTP traffic was not permitted -->
+<!-- https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted -->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">192.168.2.14</domain>
+    </domain-config>
+</network-security-config>

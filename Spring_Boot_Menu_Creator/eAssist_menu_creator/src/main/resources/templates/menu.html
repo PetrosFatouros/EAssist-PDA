@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Creator - Menu</title>
+
+    <!--Bootstrap link-->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+    <!--Custom stylesheet link-->
+    <link rel="stylesheet" th:href="@{/css/menu.css}">
+</head>
+<body>
+<main>
+
+    <!--Display menu section-->
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+
+                <!--Display context of the section-->
+                <h1>Current menu</h1>
+                <p class="lead text-muted">
+                    The lists below contain all the current categories and items of your menu
+                </p>
+                <p>
+                    <a th:href="@{/home}" class="btn btn-primary my-2">Back to homepage</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--Display message if categories list is empty-->
+    <div th:if="${categories.size() == 0}">
+        <h3 class="fw-light text-center">No categories found</h3><br>
+    </div>
+
+    <!--Display table with categories-->
+    <div th:if="${categories.size() != 0}">
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Category name</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="category: ${categories}">
+                <td th:text="${category.getName()}">Category name</td>
+                <td>
+                    <a th:href="@{/category/{category_name}(category_name=${category.getName()})}"
+                       class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--End: Display table with categories-->
+
+    <!--Display message if items list is empty-->
+    <div th:if="${items.size() == 0}">
+        <h3 class="fw-light text-center">No items found</h3><br>
+    </div>
+
+    <!--Display table with items-->
+    <div th:if="${items.size() != 0}">
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Item name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="item: ${items}">
+                <td th:text="${item.getName()}">Item name</td>
+                <td th:text="${item.getCategory().getName()}">Category</td>
+                <td th:text="${item.getPrice()}">Price</td>
+                <td th:text="${item.getQuantity()}">Quantity</td>
+                <td>
+                    <a th:href="@{/item/{item_name}(item_name=${item.getName()})}"
+                       class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--End: Display table with items-->
+
+</main>
+</body>
+</html>

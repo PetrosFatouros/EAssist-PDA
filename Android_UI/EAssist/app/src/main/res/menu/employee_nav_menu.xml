@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/orders"
+        android:icon="@drawable/ic_sharp_hourglass_top_24"
+        android:id="@+id/viewOrdersFragment"/>
+    <item android:title="@string/add_order"
+        android:icon="@drawable/ic_sharp_add_24"
+        android:id="@+id/selectTableFragment"/>
+    <item android:title="@string/tables"
+        android:icon="@drawable/ic_sharp_table_chart_24"
+        android:id="@+id/viewTablesFragment"/>
+</menu>

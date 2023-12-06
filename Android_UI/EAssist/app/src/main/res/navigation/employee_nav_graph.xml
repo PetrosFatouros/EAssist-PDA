@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/employee_nav_graph"
+    app:startDestination="@id/viewOrdersFragment">
+    <fragment
+        android:id="@+id/viewOrdersFragment"
+        android:name="com.unipi.pfatouros.eassist.fragment.employee.ViewOrdersFragment"
+        android:label="@string/view_pending_orders"
+        tools:layout="@layout/fragment_view_orders" >
+        <action
+            android:id="@+id/action_viewOrdersFragment_to_viewItemsOfOrderFragment"
+            app:destination="@id/viewItemsOfOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewTablesFragment"
+        android:name="com.unipi.pfatouros.eassist.fragment.employee.ViewTablesFragment"
+        android:label="@string/view_tables"
+        tools:layout="@layout/fragment_view_tables" >
+        <action
+            android:id="@+id/action_viewTablesFragment_to_viewOrdersOfTableFragment"
+            app:destination="@id/viewOrdersOfTableFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectTableFragment"
+        android:name="com.unipi.pfatouros.eassist.fragment.employee.SelectTableFragment"
+        android:label="@string/select_table"
+        tools:layout="@layout/fragment_select_table" >
+        <action
+            android:id="@+id/action_selectTableFragment_to_selectItemsFragment"
+            app:destination="@id/selectItemsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewItemsOfOrderFragment"
+        android:name="com.unipi.pfatouros.eassist.fragment.employee.ViewItemsOfOrderFragment"
+        android:label="Items of order: {order_id}"
+        tools:layout="@layout/fragment_view_items_of_order">
+        <argument
+            android:name="order_id"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewOrdersOfTableFragment"
+        android:name="com.unipi.pfatouros.eassist.fragment.employee.ViewOrdersOfTableFragment"
+        android:label="Table: {table_name}"
+        tools:layout="@layout/fragment_view_orders_of_table">
+        <action
+            android:id="@+id/action_viewOrdersOfTableFragment_to_viewItemsOfOrderFragment"
+            app:destination="@id/viewItemsOfOrderFragment" />
+        <argument
+            android:name="table_id"
+            app:argType="long" />
+        <argument
+            android:name="table_name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectItemsFragment"
+        android:name="com.unipi.pfatouros.eassist.fragment.employee.SelectItemsFragment"
+        android:label="Order for table: {table_name}"
+        tools:layout="@layout/fragment_select_items" >
+        <argument
+            android:name="table_id"
+            app:argType="long" />
+        <argument
+            android:name="table_name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_selectItemsFragment_to_reviewItemsFragment"
+            app:destination="@id/reviewItemsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewItemsFragment"
+        android:name="com.unipi.pfatouros.eassist.fragment.employee.ReviewItemsFragment"
+        android:label="@string/review_order"
+        tools:layout="@layout/fragment_review_items">
+        <argument
+            android:name="table_id"
+            app:argType="long" />
+    </fragment>
+</navigation>

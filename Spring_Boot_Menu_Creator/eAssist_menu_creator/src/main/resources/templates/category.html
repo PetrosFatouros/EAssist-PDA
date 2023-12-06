@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Creator - Add Category</title>
+
+    <!--Bootstrap link-->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+    <!--Custom stylesheet link-->
+    <link rel="stylesheet" th:href="@{/css/category.css}">
+</head>
+<body class="text-center">
+<main class="form-signin w-100 m-auto">
+
+    <!--Display logo image-->
+    <img id="logo_image" class="mb-4" src="../static/images/logo.png" th:src="@{/images/logo.png}" alt="logo image">
+
+    <!--Header-->
+    <h1 class="h3 mb-3 fw-normal">Add category</h1>
+
+    <!--Display message after successfully adding a category-->
+    <div class="alert alert-success" role="alert" th:if="${param.success}">
+        Category added successfully!
+    </div>
+
+    <!--Display error message if category could not be added-->
+    <div class="alert alert-danger" role="alert" th:if="${param.error}">
+        Category could not be added!
+    </div>
+
+    <!--Display form for adding category to menu-->
+    <form th:action="@{/category}" th:object="${category}" method="post">
+        <!--Display input for category name-->
+        <div class="form-floating">
+            <input type="text" class="form-control" id="category" th:field="*{name}"
+                   maxlength="20" pattern="^[A-Za-z][A-Za-z0-9]*(?:\s[A-Za-z0-9]+)*$"
+                   placeholder="Cocktails" required>
+            <label for="category">Category name</label>
+        </div><br>
+
+        <!--Display submit button-->
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Add category</button><br><br>
+
+        <!--Display return to homepage link-->
+        <a th:href="@{/home}" class="link-primary">Return to homepage</a>
+
+    </form>
+
+</main>
+</body>
+</html>

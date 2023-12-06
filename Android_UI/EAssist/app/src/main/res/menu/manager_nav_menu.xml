@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/inventory"
+        android:icon="@drawable/ic_sharp_menu_book_24"
+        android:id="@+id/viewInventoryFragment"/>
+    <item android:title="@string/statistics"
+        android:icon="@drawable/ic_sharp_bar_chart_24"
+        android:id="@+id/viewStatisticsFragment"/>
+</menu>

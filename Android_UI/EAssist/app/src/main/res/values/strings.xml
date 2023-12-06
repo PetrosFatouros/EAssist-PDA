@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">E-Assist</string>
+
+    <string name="nav_host_fragment_exception_message">Navigation host fragment is null</string>
+    <string name="bad_credentials">Bad Credentials</string>
+    <string name="unsuccessful_response_exception_message"> Unsuccessful response, code:</string>
+    <string name="jwt_could_not_be_saved">JWT could not be saved</string>
+    <string name="registration_completed">Registration completed</string>
+    <string name="registration_could_not_be_completed">Registration could not be completed</string>
+    <string name="user_deleted">User deleted</string>
+    <string name="user_could_not_be_deleted">User could not be deleted</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="you_are_not_an_admin">You are not an Admin</string>
+    <string name="you_are_not_a_manager">You are not a Manager</string>
+    <string name="you_are_not_an_employee">You are not an Employee</string>
+    <string name="bottom_sheet_dialog">Bottom sheet dialog</string>
+    <string name="inventory_updated">Inventory updated</string>
+    <string name="inventory_could_not_be_updated">Inventory could not be updated</string>
+
+    <string name="sign_in_caps">SIGN IN</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="background_image_description">Background image</string>
+    <string name="sign_in_fragment_label">Sign in</string>
+
+    <string name="admin_caps">ADMIN</string>
+    <string name="manager_caps">MANAGER</string>
+    <string name="employee_caps">EMPLOYEE</string>
+    <string name="select_role_fragment_label">Select role</string>
+
+    <string name="view_users">View users</string>
+    <string name="add_user">Add user</string>
+    <string name="inventory">Inventory</string>
+    <string name="statistics">Statistics</string>
+
+    <string name="new_quantity">New quantity</string>
+    <string name="edit_quantity">Edit quantity</string>
+    <string name="edit_price">Edit price</string>
+    <string name="new_price">New price</string>
+
+    <string name="view_pending_orders">View pending orders</string>
+    <string name="select_table">Select table</string>
+    <string name="view_tables">View tables</string>
+    <string name="table_">Table:</string>
+    <string name="active">active</string>
+    <string name="ready">ready</string>
+    <string name="unpaid">unpaid</string>
+    <string name="complete">complete</string>
+    <string name="unexpected_value_">Unexpected value:</string>
+    <string name="status_updated">Status updated</string>
+    <string name="status_could_not_be_updated">Status could not be updated</string>
+    <string name="table_updated">Table updated</string>
+    <string name="table_could_not_be_updated">Table could not be updated</string>
+
+    <string name="items_of_order_">Items of order:</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="add_user_caps">ADD USER</string>
+    <string name="email">Email</string>
+    <string name="employee">Employee</string>
+    <string name="manager">Manager</string>
+    <string name="admin">Admin</string>
+    <string name="delete_caps">DELETE</string>
+    <string name="roles_">Roles:</string>
+    <string name="email_">Email:</string>
+    <string name="username_">Username:</string>
+
+    <string name="employee_lower">employee</string>
+    <string name="manager_lower">manager</string>
+    <string name="admin_lower">admin</string>
+    <string name="edit_caps">EDIT</string>
+    <string name="item_">Item:</string>
+    <string name="category_">Category:</string>
+    <string name="price_">Price:</string>
+    <string name="quantity_">Quantity:</string>
+    <string name="orders">Orders</string>
+    <string name="add_order">Add order</string>
+    <string name="tables">Tables</string>
+    <string name="status_caps">STATUS</string>
+    <string name="table_name_">Table name:</string>
+    <string name="order_id_">Order ID:</string>
+    <string name="available">available</string>
+    <string name="selected_zero">Selected: 0</string>
+    <string name="selected_">Selected:</string>
+    <string name="total_cost_of_table_orders_">Total cost of table\'s orders:</string>
+    <string name="euros">euros</string>
+    <string name="total_cost_of_order_">Total cost of order:</string>
+    <string name="review_order_caps">REVIEW ORDER</string>
+    <string name="review_order">Review order</string>
+    <string name="add_order_caps">ADD ORDER</string>
+    <string name="select_quantity">Select quantity</string>
+    <string name="zero">0</string>
+    <string name="add_caps">ADD</string>
+
+    <string name="special_code">\@@</string>
+    <string name="item_not_available_in_that_quantity">Item not available in that quantity</string>
+    <string name="order_added_to_system">Order added to system</string>
+    <string name="at_least_one_item_must_be_selected">At least one item must be selected</string>
+    <string name="sold_">Sold:</string>
+    <string name="sold">sold</string>
+    <string name="times">times</string>
+    <string name="select_date_caps">SELECT DATE</string>
+    <string name="all_history_caps">ALL HISTORY</string>
+    <string name="profit_">Profit:</string>
+    <string name="profit">profit</string>
+    <string name="all_history">All history</string>
+    <string name="date_">Date:</string>
+
+    <string name="status">status</string>
+    <string name="refresh_caps">REFRESH</string>
+
+</resources>

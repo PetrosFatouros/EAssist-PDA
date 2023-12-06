@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "app.jwtSecret",
+      "type": "java.lang.String",
+      "description": "Secret key for JWTs"
+    },
+    {
+      "name": "app.jwtExpirationMs",
+      "type": "java.lang.String",
+      "description": "JWTs expires after 12 hours"
+    }
+  ]
+}

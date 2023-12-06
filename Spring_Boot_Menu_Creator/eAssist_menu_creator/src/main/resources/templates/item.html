@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Creator - Add Item</title>
+
+    <!--Bootstrap link-->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+    <!--Custom stylesheet link-->
+    <link rel="stylesheet" th:href="@{/css/item.css}">
+</head>
+<body class="form-body text-center">
+<main class="form-signin w-100 m-auto">
+
+    <!--Display logo image-->
+    <img id="logo_image" class="mb-4 logo" src="../static/images/logo.png" th:src="@{/images/logo.png}" alt="logo image">
+
+    <!--Header-->
+    <h1 class="h3 mb-3 fw-normal">Add item</h1>
+
+    <!--Display message after successfully adding a category-->
+    <div class="alert alert-success" role="alert" th:if="${param.success}">
+        Item added successfully!
+    </div>
+
+    <!--Display error message if category could not be added-->
+    <div class="alert alert-danger" role="alert" th:if="${param.error}">
+        Item could not be added!
+    </div>
+
+    <!--Display form for adding category to menu-->
+    <form th:action="@{/item}" th:object="${item}" method="post">
+        <!--Display input for item name-->
+        <div class="form-floating">
+            <input id="item_name" class="form-control" type="text" th:field="*{name}"
+                   maxlength="40" pattern="^[A-Za-z][A-Za-z0-9]*(?:\s[A-Za-z0-9]+)*$"
+                   placeholder="Martini" required>
+            <label for="item_name">Item name</label>
+        </div><br>
+
+        <!--Display select for item category-->
+        <label for="item_category" class="h5 mb-3 fw-normal">Category</label>
+        <select id="item_category" class="form-select" th:field="*{category}" required>
+            <option th:each="category : ${categories}" th:value="${category.getName()}" th:text="${category.getName()}"/>
+        </select><br>
+
+        <!--Display input for item price-->
+        <div class="form-floating">
+            <input id="item_price" class="form-control" type="text" th:field="*{price}"
+                   pattern="^[1-9]\d*(\.\d+)?$" placeholder="10" required>
+            <label for="item_price">Price</label>
+        </div>
+
+        <!--Display input for item quantity-->
+        <div class="form-floating">
+            <input id="item_quantity" class="form-control" type="text" th:field="*{quantity}"
+                   pattern="^[1-9]\d*$" placeholder="0" required>
+            <label for="item_quantity">Quantity</label>
+        </div><br>
+
+        <!--Display submit button-->
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Add item</button><br><br>
+
+        <!--Display return to homepage link-->
+        <a th:href="@{/home}" class="link-primary">Return to homepage</a>
+
+    </form>
+
+</main>
+</body>
+</html>

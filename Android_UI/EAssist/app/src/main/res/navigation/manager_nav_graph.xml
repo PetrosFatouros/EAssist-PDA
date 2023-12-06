@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/manager_graph"
+    app:startDestination="@id/viewInventoryFragment">
+
+    <fragment
+        android:id="@+id/viewInventoryFragment"
+        android:name="com.unipi.pfatouros.eassist.fragment.manager.ViewInventoryFragment"
+        android:label="@string/inventory"
+        tools:layout="@layout/fragment_view_inventory" />
+    <fragment
+        android:id="@+id/viewStatisticsFragment"
+        android:name="com.unipi.pfatouros.eassist.fragment.manager.ViewStatisticsFragment"
+        android:label="@string/statistics"
+        tools:layout="@layout/fragment_view_statistics" />
+</navigation>
